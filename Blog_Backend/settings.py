@@ -1,3 +1,4 @@
+# coding: utf-8
 """
 Django settings for Blog_Backend project.
 
@@ -83,9 +84,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog_dev',
         'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
-        'PORT': '20010',
+        'PASSWORD': 'dora1234',
+        'HOST': 'mysql',
+        'PORT': '3306',
     }
 }
 

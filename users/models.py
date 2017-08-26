@@ -1,3 +1,4 @@
+# coding: utf-8
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from utils.default_model import random_nick_name
