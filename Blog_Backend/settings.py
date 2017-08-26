@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
-    'users',
 ]
 
 MIDDLEWARE = [
@@ -84,9 +83,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog_dev',
         'USER': 'root',
-        'PASSWORD': 'dora1234',
-        'HOST': '43.248.77.75',
-        'PORT': '3306',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '20010',
     }
 }
 
@@ -113,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'zh-hans'
+# LANGUAGE_CODE = 'zh-hans'
 
 TIME_ZONE = 'Asia/Shanghai'
 
