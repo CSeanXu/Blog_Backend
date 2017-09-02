@@ -7,6 +7,7 @@ services:
     image: nginx:1.13.3-alpine
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - /Users/sean/WebstormProjects/blog/build:/usr/share/nginx/html
     ports:
       - 80:80
     links:
@@ -23,6 +24,8 @@ services:
       - MYSQL_ROOT_PASSWORD=dora1234
       - character-set-server=utf8mb4
       - collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
 
   api:
     container_name: blog_api
@@ -32,6 +35,8 @@ services:
       - mysql
     depends_on:
       - mysql
+    ports:
+      - 8000:8000
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
