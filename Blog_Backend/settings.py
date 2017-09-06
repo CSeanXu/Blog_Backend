@@ -35,13 +35,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'knox',
     'users.apps.UsersConfig',
+    'posts.apps.PostsConfig',
+    'admin.apps.AdminConfig',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +141,9 @@ EMAIL_HOST_USER = "anshengme@sina.com"
 EMAIL_HOST_PASSWORD = "ansheng.me"
 EMAIL_USE_TLS = False
 EMAIL_FROM = "anshengme@sina.com"  # 发件人
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'knox.auth.TokenAuthentication',
+    ),
+}

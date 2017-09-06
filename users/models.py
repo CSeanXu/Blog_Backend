@@ -11,6 +11,5 @@ class UserProfile(AbstractUser):
         ('female', '女'),
         ('unknown', '未知')
     )
-    nick_name = models.CharField(max_length=100, default=random_nick_name)
     gender = models.CharField(choices=gender_choices, default='unknown', max_length=20)
     image = models.ImageField(upload_to='avatar/%Y/%m', max_length=100, default='avatar/avatar.png')
